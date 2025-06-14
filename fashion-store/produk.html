@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Produk - Mukena Shop</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header>
+    <div class="logo">
+      <img src="img/LOGO.jpg" alt="Mukena Shop Logo" />
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="produk.html" class="active">Produk</a></li>
+        <li><a href="keranjang.html">Keranjang</a></li>
+        <li><a href="tentang_kami.html">Tentang Kami</a></li>
+        <li><a href="login.html">Login</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="product-list">
+    <h1>Produk Kami</h1>
+    <div class="product-grid">
+
+      <!-- Kartu Produk 1 -->
+      <div class="product-card">
+        <img src="img/rayon.jpg" alt="Mukena 1">
+        <h3>Mukena Rayon Renda</h3>
+        <p class="price">Rp. 100.000</p>
+        <div class="action-buttons">
+          <!-- Tambah onclick untuk menambahkan ke keranjang -->
+          <button class="btn-beli"onclick="window.location.href='pembayaran.html'">Beli</button>
+          <button class="btn-keranjang" 
+                  onclick="addToCart('Mukena Rayon Renda', 100000)">
+            <img src="img/keranjang.png" alt="Keranjang"/>
+          </button>
+        </div>
+      </div>
+
+      <!-- Kartu Produk 2 (contoh sama) -->
+      <div class="product-card"> 
+        <img src="img/Armany silk.jpg" alt="Mukena Silk">
+        <h3>Mukena Armany Silk</h3>
+        <p class="price">Rp. 175.000</p>
+        <div class="action-buttons">
+          <button class="btn-beli"onclick="window.location.href='pembayaran.html'">Beli</button>
+          <button class="btn-keranjang" 
+                  onclick="addToCart('Mukena Armany Silk', 175000)">
+            <img src="img/keranjang.png" alt="Keranjang"/>
+          </button>
+        </div>
+      </div>
+
+      <!-- Kartu Produk 3 (contoh sama) -->
+      <div class="product-card"> 
+        <img src="img/WhatsApp .jpg" alt="Mukena 2">
+        <h3>Mukena Armany Silk Motif</h3>
+        <p class="price">Rp. 175.000</p>
+        <div class="action-buttons">
+          <button class="btn-beli"onclick="window.location.href='pembayaran.html'">Beli</button>
+          <button class="btn-keranjang" 
+                  onclick="addToCart('Mukena Armany Silk Motif', 175000)">
+            <img src="img/keranjang.png" alt="Keranjang"/>
+          </button>
+        </div>
+      </div>
+
+      <!-- Kartu Produk 6 (contoh sama) -->
+<div class="product-card"> 
+  <img src="img/G 1.jpg" alt="Mukena 2">
+  <h3>Gamis Crinkel Malaysia</h3>
+  <p class="price">Rp. 110.000</p>
+  <div class="action-buttons">
+    <button class="btn-beli"onclick="window.location.href='pembayaran.html'">Beli</button>
+    <button class="btn-keranjang" 
+            onclick="addToCart('Gamis Crinkel Malaysia', 110.000)">
+      <img src="img/keranjang.png" alt="Keranjang"/>
+    </button>
+  </div>
+</div>
+
+      <!-- Kartu Produk 6 (contoh sama) -->
+<div class="product-card"> 
+  <img src="img/G2.jpg" alt="Mukena 2">
+  <h3>Gamis Crinkel Malaysia</h3>
+  <p class="price">Rp. 110.000</p>
+  <div class="action-buttons">
+    <button class="btn-beli"onclick="window.location.href='pembayaran.html'">Beli</button>
+    <button class="btn-keranjang" 
+            onclick="addToCart('Gamis Crinkel Malaysia', 110.000)">
+      <img src="img/keranjang.png" alt="Keranjang"/>
+    </button>
+  </div>
+</div>
+
+<!-- Kartu Produk 6 (contoh sama) -->
+<div class="product-card"> 
+  <img src="img/G4.jpg" alt="Mukena 2">
+  <h3>Gamis Crinkel Malaysia</h3>
+  <p class="price">Rp. 110.000</p>
+  <div class="action-buttons">
+    <button class="btn-beli"onclick="window.location.href='pembayaran.html'">Beli</button>
+    <button class="btn-keranjang" 
+            onclick="addToCart('Gamis Crinkel Malaysia', 110.000)">
+      <img src="img/keranjang.png" alt="Keranjang"/>
+    </button>
+  </div>
+</div>
+
+
+
+       <!-- Kartu Produk 4 (contoh sama) -->
+       <div class="product-card"> 
+        <img src="img/Hitube_Dnc3YI71MI_2025_03_06_07_39_45.jpg" alt="Mukena 2">
+        <h3>Mukena Armany Slik</h3>
+        <p class="price">Rp. 175.000</p>
+        <div class="action-buttons">
+          <button class="btn-beli"onclick="window.location.href='pembayaran.html'">Beli</button> 
+          <button class="btn-keranjang" 
+                  onclick="addToCart('Mukena Armany Silk', 175000)">
+            <img src="img/keranjang.png" alt="Keranjang"/>
+          </button>
+        </div>
+      </div>
+
+      <!-- Kartu Produk 6 (contoh sama) -->
+      <div class="product-card"> 
+        <img src="img/Hitube_QYp3GMFMGy_2025_03_06_07_39_51.jpg" alt="Mukena 2">
+        <h3>Mukena Armany Slik</h3>
+        <p class="price">Rp. 175.000</p>
+        <div class="action-buttons">
+          <button class="btn-beli"onclick="window.location.href='pembayaran.html'">Beli</button>
+          <button class="btn-keranjang" 
+                  onclick="addToCart('Mukena Armany Silk', 175000)">
+            <img src="img/keranjang.png" alt="Keranjang"/>
+          </button>
+        </div>
+      </div>
+
+      <!-- Kartu Produk 6 (contoh sama) -->
+      <div class="product-card"> 
+        <img src="img/2025-04-30 pukul 12.35.15_9bcb48c9.jpg" alt="Mukena 2">
+        <h3>Mukena Armany Slik Motif</h3>
+        <p class="price">Rp. 175.000</p>
+        <div class="action-buttons">
+          <button class="btn-beli"onclick="window.location.href='pembayaran.html'">Beli</button>
+          <button class="btn-keranjang" 
+                  onclick="addToCart('Mukena Armany Silk Motif', 175000)">
+            <img src="img/keranjang.png" alt="Keranjang"/>
+          </button>
+        </div>
+      </div>
+
+ <!-- Kartu Produk 6 (contoh sama) -->
+ <div class="product-card"> 
+  <img src="img/H1.jpg" alt="Mukena 2">
+  <h3>HOODIE SABLON</h3>
+  <p class="price">Rp. 85.000</p>
+  <div class="action-buttons">
+    <button class="btn-beli"onclick="window.location.href='pembayaran.html'">Beli</button>
+    <button class="btn-keranjang" 
+            onclick="addToCart('Hoodie Polos', 85000)">
+      <img src="img/keranjang.png" alt="Keranjang"/>
+    </button>
+  </div>
+</div>
+
+<!-- Kartu Produk 6 (contoh sama) -->
+ <div class="product-card"> 
+  <img src="img/H2.jpg" alt="Mukena 2">
+  <h3>HOODIE SABLON</h3>
+  <p class="price">Rp. 85.000</p>
+  <div class="action-buttons">
+    <button class="btn-beli"onclick="window.location.href='pembayaran.html'">Beli</button>
+    <button class="btn-keranjang" 
+            onclick="addToCart('Hoodie Polos', 85000)">
+      <img src="img/keranjang.png" alt="Keranjang"/>
+    </button>
+  </div>
+</div>
+
+<!-- Kartu Produk 6 (contoh sama) -->
+ <div class="product-card"> 
+  <img src="img/H3.jpg" alt="Mukena 2">
+  <h3>HOODIE SABLON</h3>
+  <p class="price">Rp. 85.000</p>
+  <div class="action-buttons">
+    <button class="btn-beli"onclick="window.location.href='pembayaran.html'">Beli</button>
+    <button class="btn-keranjang" 
+            onclick="addToCart('Hoodie Polos', 85000)">
+      <img src="img/keranjang.png" alt="Keranjang"/>
+    </button>
+  </div>
+</div>
+
+<!-- Kartu Produk 6 (contoh sama) -->
+ <div class="product-card"> 
+  <img src="img/H4.jpg" alt="Mukena 2">
+  <h3>HOODIE SABLON</h3>
+  <p class="price">Rp. 85.000</p>
+  <div class="action-buttons">
+    <button class="btn-beli"onclick="window.location.href='pembayaran.html'">Beli</button>
+    <button class="btn-keranjang" 
+            onclick="addToCart('Hoodie Polos', 85000)">
+      <img src="img/keranjang.png" alt="Keranjang"/>
+    </button>
+  </div>
+</div>
+
+
+
+<!-- Kartu Produk 6 (contoh sama) -->
+ <div class="product-card"> 
+  <img src="img/H6.jpg" alt="Mukena 2">
+  <h3>HOODIE SABLON</h3>
+  <p class="price">Rp. 85.000</p>
+  <div class="action-buttons">
+    <button class="btn-beli"onclick="window.location.href='pembayaran.html'">Beli</button>
+    <button class="btn-keranjang" 
+            onclick="addToCart('Hoodie Polos', 85000)">
+      <img src="img/keranjang.png" alt="Keranjang"/>
+    </button>
+  </div>
+</div>
+
+ <!-- Kartu Produk 6 (contoh sama) -->
+ <div class="product-card"> 
+  <img src="img/kaos 1.jpg" alt="Mukena 2">
+  <h3>Kaos Motif</h3>
+  <p class="price">Rp. 35.000</p>
+  <div class="action-buttons">
+    <button class="btn-beli"onclick="window.location.href='pembayaran.html'">Beli</button>
+    <button class="btn-keranjang" 
+            onclick="addToCart('Kaos Motif', 35000)">
+      <img src="img/keranjang.png" alt="Keranjang"/>
+    </button>
+  </div>
+</div>
+
+<!-- Kartu Produk 6 (contoh sama) -->
+<div class="product-card"> 
+  <img src="img/kaos 2.jpg" alt="Mukena 2">
+  <h3>Kaos Motif</h3>
+  <p class="price">Rp. 35.000</p>
+  <div class="action-buttons">
+    <button class="btn-beli"onclick="window.location.href='pembayaran.html'">Beli</button>
+    <button class="btn-keranjang" 
+            onclick="addToCart('Kaos Motif', 35000)">
+      <img src="img/keranjang.png" alt="Keranjang"/>
+    </button>
+  </div>
+</div>
+
+<!-- Kartu Produk 6 (contoh sama) -->
+<div class="product-card"> 
+  <img src="img/kaos 3.jpg" alt="Mukena 2">
+  <h3>Kaos Motif</h3>
+  <p class="price">Rp. 35.000</p>
+  <div class="action-buttons">
+    <button class="btn-beli"onclick="window.location.href='pembayaran.html'">Beli</button>
+    <button class="btn-keranjang" 
+            onclick="addToCart('Kaos Motif', 35000)">
+      <img src="img/keranjang.png" alt="Keranjang"/>
+    </button>
+  </div>
+</div>
+
+<!-- Kartu Produk 6 (contoh sama) -->
+<div class="product-card"> 
+  <img src="img/kaos 4.jpg" alt="Mukena 2">
+  <h3>Kaos Motif</h3>
+  <p class="price">Rp. 35.000</p>
+  <div class="action-buttons">
+    <button class="btn-beli"onclick="window.location.href='pembayaran.html'">Beli</button>
+    <button class="btn-keranjang" 
+            onclick="addToCart('Kaos Motif', 35000)">
+      <img src="img/keranjang.png" alt="Keranjang"/>
+    </button>
+  </div>
+</div>
+
+<!-- Kartu Produk 6 (contoh sama) -->
+<div class="product-card"> 
+  <img src="img/kaos 5.jpg" alt="Mukena 2">
+  <h3>Kaos Motif</h3>
+  <p class="price">Rp. 35.000</p>
+  <div class="action-buttons">
+    <button class="btn-beli"onclick="window.location.href='pembayaran.html'">Beli</button>
+    <button class="btn-keranjang" 
+            onclick="addToCart('Kaos Motif', 35000)">
+      <img src="img/keranjang.png" alt="Keranjang"/>
+    </button>
+  </div>
+</div>
+
+<!-- Kartu Produk 6 (contoh sama) -->
+<div class="product-card"> 
+  <img src="img/OVER 1.jpg" alt="Mukena 2">
+  <h3>Kaos OVERSIZE</h3>
+  <p class="price">Rp. 35.000</p>
+  <div class="action-buttons">
+    <button class="btn-beli"onclick="window.location.href='pembayaran.html'">Beli</button>
+    <button class="btn-keranjang" 
+            onclick="addToCart('Kaos Oversize', 45000)">
+      <img src="img/keranjang.png" alt="Keranjang"/>
+    </button>
+  </div>
+</div>
+
+<!-- Kartu Produk 6 (contoh sama) -->
+<div class="product-card"> 
+  <img src="img/k 1.jpg" alt="Mukena 2">
+  <h3>Kaos OVERSIZE</h3>
+  <p class="price">Rp. 35.000</p>
+  <div class="action-buttons">
+    <button class="btn-beli"onclick="window.location.href='pembayaran.html'">Beli</button>
+    <button class="btn-keranjang" 
+            onclick="addToCart('Kaos Oversize', 45000)">
+      <img src="img/keranjang.png" alt="Keranjang"/>
+    </button>
+  </div>
+</div>
+
+
+<!-- Kartu Produk 6 (contoh sama) -->
+<div class="product-card"> 
+  <img src="img/SARUNG.jpg" alt="Mukena 2">
+  <h3>SARUNG </h3>
+  <p class="price">Rp. 35.000</p>
+  <div class="action-buttons">
+    <button class="btn-beli"onclick="window.location.href='pembayaran.html'">Beli</button>
+    <button class="btn-keranjang" 
+            onclick="addToCart('Sarung', 35000)">
+      <img src="img/keranjang.png" alt="Keranjang"/>
+    </button>
+  </div>
+</div>
+
+<!-- Kartu Produk 6 (contoh sama) -->
+<div class="product-card"> 
+  <img src="img/RENDA.jpg" alt="Mukena 2">
+  <h3>Mukena Renda </h3>
+  <p class="price">Rp. 130.000</p>
+  <div class="action-buttons">
+    <button class="btn-beli"onclick="window.location.href='pembayaran.html'">Beli</button>
+    <button class="btn-keranjang" 
+            onclick="addToCart('Mukena Renda', 130000)">
+      <img src="img/keranjang.png" alt="Keranjang"/>
+    </button>
+  </div>
+</div>
+
+<!-- Kartu Produk 6 (contoh sama) -->
+<div class="product-card"> 
+  <img src="img/kurta.jpg" alt="Mukena 2">
+  <h3>Kemeja Kurta </h3>
+  <p class="price">Rp. 50.000</p>
+  <div class="action-buttons">
+    <button class="btn-beli"onclick="window.location.href='pembayaran.html'">Beli</button>
+    <button class="btn-keranjang" 
+            onclick="addToCart('Kemeja Kurta', 50000)">
+      <img src="img/keranjang.png" alt="Keranjang"/>
+    </button>
+  </div>
+</div>
+
+<!-- Kartu Produk 6 (contoh sama) -->
+<div class="product-card"> 
+  <img src="img/lowo.jpg" alt="Mukena 2">
+  <h3>Daster Lowo </h3>
+  <p class="price">Rp. 50.000</p>
+  <div class="action-buttons">
+    <button class="btn-beli"onclick="window.location.href='pembayaran.html'">Beli</button>
+    <button class="btn-keranjang" 
+            onclick="addToCart('Daster Lowo', 50000)">
+      <img src="img/keranjang.png" alt="Keranjang"/>
+    </button>
+  </div>
+</div>
+
+<!-- Kartu Produk 6 (contoh sama) -->
+<div class="product-card"> 
+  <img src="img/lari.jpg" alt="Mukena 2">
+  <h3>Sepatu Running </h3>
+  <p class="price">Rp. 150.000</p>
+  <div class="action-buttons">
+    <button class="btn-beli"onclick="window.location.href='pembayaran.html'">Beli</button>
+    <button class="btn-keranjang" 
+            onclick="addToCart('Sepatu Running', 150000)">
+      <img src="img/keranjang.png" alt="Keranjang"/>
+    </button>
+  </div>
+</div>
+
+<!-- Kartu Produk 6 (contoh sama) -->
+<div class="product-card"> 
+  <img src="img/KONDANGAN.jpg" alt="Mukena 2">
+  <h3>Gamis Dan Kemeja Batik </h3>
+  <p class="price">Rp. 160.000</p>
+  <div class="action-buttons">
+    <button class="btn-beli"onclick="window.location.href='pembayaran.html'">Beli</button>
+    <button class="btn-keranjang" 
+            onclick="addToCart('Gamis Dan Kemeja Batik', 160000)">
+      <img src="img/keranjang.png" alt="Keranjang"/>
+    </button>
+  </div>
+</div>
+
+<!-- Kartu Produk 6 (contoh sama) -->
+<div class="product-card"> 
+  <img src="img/daster.jpg" alt="Mukena 2">
+  <h3>Daster Rayon </h3>
+  <p class="price">Rp. 35.000</p>
+  <div class="action-buttons">
+    <button class="btn-beli"onclick="window.location.href='pembayaran.html'">Beli</button>
+    <button class="btn-keranjang" 
+            onclick="addToCart('Daster Rayon', 35000)">
+      <img src="img/keranjang.png" alt="Keranjang"/>
+    </button>
+  </div>
+</div>
+
+<!-- Kartu Produk 6 (contoh sama) -->
+<div class="product-card"> 
+  <img src="img/jens.jpg" alt="Mukena 2">
+  <h3>Jeans Sobek</h3>
+  <p class="price">Rp. 85.000</p>
+  <div class="action-buttons">
+    <button class="btn-beli"onclick="window.location.href='pembayaran.html'">Beli</button>
+    <button class="btn-keranjang" 
+            onclick="addToCart('Jeans Sobek', 85000)">
+      <img src="img/keranjang.png" alt="Keranjang"/>
+    </button>
+  </div>
+</div>
+
+<!-- Kartu Produk 6 (contoh sama) -->
+<div class="product-card"> 
+  <img src="img/Boxer.jpg" alt="Mukena 2">
+  <h3>Boxer Cowok</h3>
+  <p class="price">Rp. 35.000</p>
+  <div class="action-buttons">
+    <button class="btn-beli"onclick="window.location.href='pembayaran.html'">Beli</button>
+    <button class="btn-keranjang" 
+            onclick="addToCart('Boxer Cowok', 35000)">
+      <img src="img/keranjang.png" alt="Keranjang"/>
+    </button>
+  </div>
+</div>
+
+<!-- Kartu Produk 6 (contoh sama) -->
+<div class="product-card"> 
+  <img src="img/tas.jpg" alt="Mukena 2">
+  <h3>Tas cwek </h3>
+  <p class="price">Rp. 35.000</p>
+  <div class="action-buttons">
+    <button class="btn-beli"onclick="window.location.href='pembayaran.html'">Beli</button>
+    <button class="btn-keranjang" 
+            onclick="addToCart('Tas Cewek', 35000)">
+      <img src="img/keranjang.png" alt="Keranjang"/>
+    </button>
+  </div>
+</div>
+
+      <!-- Duplikat untuk produk lain, ubah nama & harga sesuai kebutuhan -->
+      <!-- ... -->
+
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; Rupe Shop.</p>
+  </footer>
+
+  <!-- SCRIPTS -->
+  <script>
+    // Inisialisasi localStorage jika belum ada
+    if (!localStorage.getItem('cart')) {
+      localStorage.setItem('cart', JSON.stringify([]));
+    }
+
+    // Fungsi untuk menambahkan produk ke localStorage
+    function addToCart(name, price) {
+      // Ambil data cart dari localStorage (tipe string, perlu parse JSON)
+      let cart = JSON.parse(localStorage.getItem('cart'));
+
+      // Cek apakah produk sudah ada di cart
+      let existingItem = cart.find(item => item.name === name);
+      if (existingItem) {
+        // Jika sudah ada, tambahkan quantity
+        existingItem.quantity += 1;
+      } else {
+        // Jika belum ada, masukkan item baru
+        cart.push({ name: name, price: price, quantity: 1 });
+      }
+
+      // Simpan kembali ke localStorage
+      localStorage.setItem('cart', JSON.stringify(cart));
+
+      // Opsional: tampilkan notifikasi
+      alert(`${name} berhasil ditambahkan ke keranjang!`);
+    }
+  </script>
+
+</body>
+</html>

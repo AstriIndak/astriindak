@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pembayaran - Fashion Store</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header><h1>Pembayaran</h1></header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="produk.html">Produk</a></li>
+            <li><a href="keranjang.html" class="active">Keranjang</a></li>
+            <li><a href="tentang_kami.html">Tentang Kami</a></li>
+            <li><a href="login.html">Login</a></li>
+          </ul>
+    </nav>
+    <section class="pembayaran">
+        <h2>Informasi Pembayaran</h2>
+        <form id="formPembayaran">
+            <input type="text" id="nama" placeholder="Nama Lengkap" required>
+            <input type="text" id="alamat" placeholder="Alamat Pengiriman" required>
+            <input type="text" id="telepon" placeholder="Nomor Telepon" required>
+            <label for="metodePembayaran">Metode Pembayaran:</label>
+            <select id="metodePembayaran" required>
+                <option value="transfer">Transfer Bank</option>
+                <option value="creditCard">Kartu Kredit</option>
+                <option value="cod">Bayar di Tempat (COD)</option>
+            </select>
+            <input type="submit" value="Konfirmasi Pembayaran">
+        </form>
+    </section>
+    <footer>
+        <p>&copy; 2025 Fashion Store. All rights reserved</p>
+    </footer>
+
+    <script>
+        document.getElementById("formPembayaran").addEventListener("submit", function(event) {
+            event.preventDefault();
+            const nama = document.getElementById("nama").value;
+            const alamat = document.getElementById("alamat").value;
+            const telepon = document.getElementById("telepon").value;
+            const metodePembayaran = document.getElementById("metodePembayaran").value;
+
+            alert("Pembayaran berhasil!\nNama: " + nama + "\nAlamat: " + alamat + "\nTelepon: " + telepon + "\nMetode Pembayaran: " + metodePembayaran);
+            // Redirect to home page or success page
+            window.location.href = "index.html";
+        });
+    </script>
+</body>
+</html>

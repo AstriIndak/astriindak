@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <title>Rupe Shop</title>
+  <!-- Memanggil file CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Popup Promosi -->
+  <div id="promoPopup" class="popup">
+      <div class="popup-content">
+          <span class="close" onclick="closePopup()">&times;</span>
+          <div class="slider-container">
+              <div class="slides">
+                  <img src="img/promo1.jpg" class="slide" alt="Promo 1">
+                  <img src="img/promo2.jpg" class="slide" alt="Promo 2">
+                  <img src="img/promo3.jpg" class="slide" alt="Promo 3">
+              </div>
+          </div>
+      </div>
+  </div>
+
+
+  <!-- Bagian Header -->
+  <header>
+    <div class="logo">
+      <img src="img/Logo.jpg" alt="Rupe Shop" />
+    </div>
+    <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="produk.html">Produk</a></li>
+          <li><a href="keranjang.html">Keranjang</a></li>
+          <li><a href="tentang_kami.html" class="active">Tentang Kami</a></li>
+          <li><a href="login.html">Login</a></li>
+        </ul>
+      </nav>
+      
+  </header>
+
+  <section class="banner">
+    <!-- Tombol "Prev" -->
+    <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+    
+    <!-- Slide 1 -->
+    <div class="slider">
+      <img src="img/banner1.jpg" alt="Banner 1" />
+    </div>
+    
+    <!-- Slide 2 -->
+    <div class="slider">
+      <img src="img/banner2.jpg" alt="Banner 2" />
+    </div>
+    
+    <!-- Slide 3 -->
+    <div class="slider">
+      <img src="img/banner3.jpg" alt="Banner 3" />
+    </div>
+    
+    <!-- Tombol "Next" -->
+    <button class="next" onclick="changeSlide(1)">&#10095;</button>
+  </section>
+  
+  <!-- Bagian Produk -->
+  <section class="product-section">
+    <h2>Mukena Dewasa</h2>
+    <div class="product-card">
+      <img src="img/Mukena1.jpg" alt="Mukena Dewasa" />
+      <h3>Deskripsi</h3>
+      <p>terbuat dari bahan Hyget, sebuah bahan yang dikenal ringan, nyaman, dan mudah dibawa-bawa,
+         cocok untuk perjalanan atau penggunaan sehari-hari.</p>
+    </div>
+
+    <h2>Mukena Armany Silk Motif</h2>
+    <div class="product-card">
+      <img src="img/Gambar WhatsApp .jpg" alt="Mukena Anak" />
+      <h3>Deskripsi</h3>
+      <p>mukena premium yang memadukan kelembutan Armani Silk dengan motif yang elegan dan mewah. Bahan Armani Silk memberikan kenyamanan saat dipakai, sementara motifnya menambah kesan eksklusif, cocok untuk beribadah sehari-hari maupun dalam acara khusus. 
+        Mukena ini juga sering dilengkapi dengan pouch untuk kemudahan penyimpanan dan dibawa bepergian. </p>
+    </div>
+
+    <h2>Mukena Armany Silk Motif</h2>
+    <div class="product-card">
+      <img src="img/WhatsApp .jpg" alt="Mukena Anak" />
+      <h3>Deskripsi</h3>
+      <p>mukena premium yang memadukan kelembutan Armani Silk dengan motif yang elegan dan mewah. Bahan Armani Silk memberikan kenyamanan saat dipakai, sementara motifnya menambah kesan eksklusif, cocok untuk beribadah sehari-hari maupun dalam acara khusus.
+        Mukena ini juga sering dilengkapi dengan pouch untuk kemudahan penyimpanan dan dibawa bepergian</p>
+    </div>
+
+    <h2>Mukena Armany Silk Motif</h2>
+    <div class="product-card">
+      <img src="img/Armany silk.jpg" alt="Mukena Anak" />
+      <h3>Deskripsi</h3>
+      <p>mukena premium yang memadukan kelembutan Armani Silk dengan motif yang elegan dan mewah. Bahan Armani Silk memberikan kenyamanan saat dipakai, sementara motifnya menambah kesan eksklusif, cocok untuk beribadah sehari-hari maupun dalam acara khusus.
+         Mukena ini juga sering dilengkapi dengan pouch untuk kemudahan penyimpanan dan dibawa bepergian. </p>
+    </div>
+
+    <h2>Mukena Katun Rayon Renda</h2>
+    <div class="product-card">
+      <img src="img/rayon.jpg" alt="Mukena Anak" />
+      <h3>Deskripsi</h3>
+      <p>Mukena rayon adalah pilihan yang nyaman dan sejuk untuk beribadah. Terbuat dari bahan rayon yang lembut, ringan,
+         dan mampu menyerap keringat dengan baik, sehingga cocok untuk digunakan dalam cuaca panas </p>
+    </div>
+
+
+  </section>
+
+  <script>
+    let qeryySelectoraALL(".slide") = 0;
+    const slides = document.getElementsByClassName("slider");
+  
+    // Tampilkan slide pertama saat halaman dimuat
+    showSlide(slideIndex);
+  
+    // Fungsi untuk mengubah slide
+    function changeSlide(n) {
+      slideIndex += n;
+      // Jika melewati batas, kembali ke awal/akhir
+      if (slideIndex >= slides.length) {
+        slideIndex = 0;
+      } else if (slideIndex < 0) {
+        slideIndex = slides.length - 1;
+      }
+      showSlide(slideIndex);
+    }
+  
+    // Fungsi menampilkan slide berdasarkan indeks
+    function showSlide(index) {
+      // Sembunyikan semua slide
+      for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      // Tampilkan slide yang diinginkan
+      slides[index].style.display = "block";
+    }
+  </script> 
+  
+
+  <!-- Bagian Footer -->
+  <footer>
+    <p>&copy; Rupe Shop. All rights reserved.</p>
+  </footer>
+
+
+  <script>
+    let slideIndex = 0; 
+    function showPopup() {
+        document.getElementById("promoPopup").style.display = "block";
+        slideShow();
+    }
+    function closePopup() {
+        document.getElementById("promoPopup").style.display = "none";
+    }
+    function slideShow() {
+        let slides = document.querySelectorAll(".slide");
+        slideIndex++;
+        if (slideIndex >= slides.length) slideIndex = 0;
+        document.querySelector(".slides").style.transform = `translateX(${-slideIndex * 300}px)`;
+        setTimeout(slideShow, 3000);
+    }
+    window.onload = function() {
+        setTimeout(showPopup, 2000);
+    };
+  </script>
+
+</body>
+</html>

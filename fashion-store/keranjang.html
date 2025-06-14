@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Keranjang Belanja - Fashion Store</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header>
+    <div class="logo">
+      <img src="img/LOGO.jpg" alt="Fashion Store Logo" />
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="produk.html">Produk</a></li>
+        <li><a href="keranjang.html" class="active">Keranjang</a></li>
+        <li><a href="tentang_kami.html">Tentang Kami</a></li>
+        <li><a href="login.html">Login</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="cart-section">
+    <h1>Keranjang Belanja</h1>
+
+    <!-- Kontainer tempat menampilkan item cart -->
+    <div id="cart-container"></div>
+
+    <!-- Bagian tombol aksi -->
+    <div class="cart-actions">
+      <a href="produk.html" class="btn-secondary">Kembali Berbelanja</a>
+      <button class="btn-primary"onclick="window.location.href='pembayaran.html'">Selesaikan Belanja</button>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Fashion Store. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function loadCart() {
+      // Ambil data cart dari localStorage
+      let cart = JSON.parse(localStorage.getItem('cart')) || [];
+      let cartContainer = document.getElementById('cart-container');
+
+      // Jika cart kosong
+      if (cart.length === 0) {
+        cartContainer.innerHTML = '<p>Keranjang masih kosong.</p>';
+        return;
+      }
+
+      let total = 0;
+      let html = '';
+
+      // Tampilkan setiap item
+cart.forEach((item, index) => {
+  let itemTotal = item.price * item.quantity;
+  total += itemTotal;
+
+  html += `
+    <div class="cart-item">
+      <h3>${item.name}</h3>
+      <p>Harga: Rp. ${item.price.toLocaleString()}</p>
+
+      <!-- Tombol minus dan plus -->
+      <div class="quantity-control">
+        <button onclick="decrementItem(${index})">-</button>
+        <span>${item.quantity}</span>
+        <button onclick="incrementItem(${index})">+</button>
+      </div>
+
+      <p>Subtotal: Rp. ${itemTotal.toLocaleString()}</p>
+    </div>
+  `;
+});
+
+
+      cartContainer.innerHTML = html;
+    }
+    function incrementItem(index) {
+  let cart = JSON.parse(localStorage.getItem('cart')) || [];
+  // Tambah quantity item
+  cart[index].quantity++;
+  // Simpan kembali ke localStorage
+  localStorage.setItem('cart', JSON.stringify(cart));
+  // Refresh tampilan keranjang
+  loadCart();
+}
+
+function decrementItem(index) {
+  let cart = JSON.parse(localStorage.getItem('cart')) || [];
+  
+  // Jika quantity masih di atas 1, cukup kurangi
+  if (cart[index].quantity > 1) {
+    cart[index].quantity--;
+  } else {
+    // Jika quantity = 1, dan user klik minus, hapus item
+    cart.splice(index, 1);
+  }
+
+  localStorage.setItem('cart', JSON.stringify(cart));
+  loadCart();
+}
+
+    // Panggil loadCart() saat halaman selesai dimuat
+    document.addEventListener('DOMContentLoaded', loadCart);
+  </script>
+</body>
+</html>
